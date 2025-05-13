@@ -1,0 +1,101 @@
+/* Prefered colors */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111827;
+    color: #e5e7eb;
+  }
+
+  .services_card {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .services_card p {
+    color: #9ca3af;
+  }
+
+  .services_icon-wrapper {
+    background-color: #1e40af;
+    color: #93c5fd;
+  }
+}
+
+@media (min-width: 48rem) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .hero-text_hero-btn {
+    padding: 1rem;
+  }
+
+  .nav-btn {
+    transition: all 0.3s ease; /* Add transition on base class */
+  }
+  .nav-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #4c6b8f;
+  }
+
+  .login-signUp_hamburger-btn {
+    gap: 0.967rem;
+  }
+
+  .hero-text_hero-btn > p {
+    width: 25rem;
+  }
+
+  .hero-btn {
+    transition: all 0.3s ease; /* Add transition on base class */
+  }
+
+  .hero-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    background: #4c6b8f;
+  }
+
+  .hero-btn:focus {
+    outline: 2px solid #38bdf8; /* Light blue focus ring */
+    outline-offset: 3px;
+  }
+
+  /* Why Us */
+  .why_us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .why_us-section > h2 {
+    font-size: 2rem;
+  }
+
+  .why_us-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .why_us-card p {
+    font-size: 1rem;
+  }
+
+  /* Sevices Section */
+  .services_section-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services_text > h2 {
+    font-size: 2rem;
+  }
+
+  /* CTA Section */
+  .cta-buttons {
+    flex-direction: row;
+  }
+
+  /* Footer */
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
