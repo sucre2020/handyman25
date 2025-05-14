@@ -13,6 +13,7 @@ const links = document.querySelectorAll(".nav-links a");
 links.forEach((link) => {
   if (link.getAttribute("href") === currentPath) {
     link.classList.add("active-link");
+    console.log(currentPath);
   }
 });
 
