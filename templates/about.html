@@ -1,7 +1,126 @@
 {% extends "layout.html" %} {% block title %} About Us - Handyman Services {% endblock %}
 {% block content %}
       <section class="aboutUs-hero-section">
-        <h1>About Sangisang Services</h1>
+        <h1>About Sangisang Handyman Services</h1>
       </section>
+      <main>
+        <section class="hero">
+          <h1>About Sangisang Handyman Services</h1>
+          <p>
+            We connect skilled handymen with customers across regions, providing
+            reliable, affordable, and quality home repair and maintenance solutions.
+          </p>
+        </section>
+      
+        <section class="about-content">
+          <div class="mission-vision">
+            <div class="mission">
+              <h2>Our Mission</h2>
+              <p>
+                To empower communities by delivering trusted handyman services that
+                solve everyday challenges — from plumbing and electrical work to
+                carpentry and general maintenance — ensuring homes and businesses run smoothly.
+              </p>
+            </div>
+      
+            <div class="vision">
+              <h2>Our Vision</h2>
+              <p>
+                To become the most reliable and accessible handyman platform nationwide,
+                fostering trust between skilled professionals and customers while
+                raising standards in home and commercial maintenance.
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <section class="values">
+          <h2>Our Core Values</h2>
+          <div class="values-grid">
+            <div class="value-item">
+              <img src="{{url_for('static', filename='/images/TeamworkSized.png')}}" alt="Collaboration Icon" />
+              <h3>Collaboration</h3>
+              <p>Connecting handymen and customers with open communication and mutual respect.</p>
+            </div>
+            <div class="value-item">
+              <img src="{{url_for('static', filename='/images/TransparencySized.png')}}" alt="Transparency Icon" />
+              <h3>Transparency</h3>
+              <p>Clear pricing and honest service descriptions, so customers always know what to expect.</p>
+            </div>
+            <div class="value-item">
+              <img src="{{url_for('static', filename='/images/IntegritySized.png')}}" alt="Integrity Icon" />
+              <h3>Integrity</h3>
+              <p>Ensuring all handymen meet high standards of professionalism and quality.</p>
+            </div>
+            <div class="value-item">
+              <img src="{{url_for('static', filename='/images/TrustSized.png')}}" alt="Trust Icon" />
+              <h3>Trust</h3>
+              <p>Building long-term relationships through dependable and safe service.</p>
+            </div>
+          </div>
+        </section>
+      
+        <section class="why-us">
+          <h2>Why Choose Sangisang Handyman Services?</h2>
+          <div class="why-us-grid">
+            <div class="reason">
+              <h3>Verified Professionals</h3>
+              <p>
+                All handymen undergo thorough vetting to ensure skill and reliability.
+              </p>
+            </div>
+            <div class="reason">
+              <h3>Wide Range of Skills</h3>
+              <p>
+                From electrical work to plumbing and carpentry, we connect you to
+                experts for every need.
+              </p>
+            </div>
+            <div class="reason">
+              <h3>Convenient Booking</h3>
+              <p>
+                Easy-to-use platform lets you find and book trusted handymen quickly.
+              </p>
+            </div>
+            <div class="reason">
+              <h3>Customer Support</h3>
+              <p>
+                We’re here to help every step of the way, ensuring your satisfaction.
+              </p>
+            </div>
+          </div>
+        </section>
+      
+        <section class="process">
+          <h2>How It Works</h2>
+          <div class="process-steps">
+            <div class="step">
+              <span>01</span>
+              <h3>Find a Handyman</h3>
+              <p>Search by skill, location, or availability to find the right professional.</p>
+            </div>
+            <div class="step">
+              <span>02</span>
+              <h3>Review Profiles</h3>
+              <p>Check ratings, reviews, and past work to choose confidently.</p>
+            </div>
+            <div class="step">
+              <span>03</span>
+              <h3>Book & Pay</h3>
+              <p>Securely book and pay through our platform with transparent pricing.</p>
+            </div>
+            <div class="step">
+              <span>04</span>
+              <h3>Get the Job Done</h3>
+              <p>Our handymen arrive on time and deliver quality work.</p>
+            </div>
+            <div class="step">
+              <span>05</span>
+              <h3>Rate & Review</h3>
+              <p>Share your experience to help others and keep quality high.</p>
+            </div>
+          </div>
+        </section>
+      </main>      
     </main>
     {% endblock %}

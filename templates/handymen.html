@@ -1,8 +1,37 @@
-{% extends "layout.html" %} {% block title %} Handymen - Handyman Services {% endblock %}
-{% block content %}
-      <section class="handymenList-hero-section">
-        <h1>Handymen List</h1>
-      </section>
-    </main>
-    
-  {% endblock %}
+{% extends "layout.html" %} {% block title %} Handymen - Handyman Services {%
+endblock %} {% block content %}
+<section class="handymenList-hero-section">
+  <h1>Handymen List</h1>
+
+  <h2>Available Handymen</h2>
+
+  <div class="values-grid">
+    {% for handyman in handymen %}
+    <div class="handyman-item">
+      <img
+        src="{{ handyman.image.replace('/upload/', '/upload/w_800,h_800,c_fill,g_auto/') }}"
+        srcset="
+        {{ handyman.image.replace('/upload/', '/upload/w_1000,h_1000,c_fill,g_auto/') }} 1000w, 
+        {{ handyman.image.replace('/upload/', '/upload/w_1200,h_1200,c_fill,g_auto/') }} 1200w"
+        sizes="(max-width: 768px) 800px, (max-width: 1200px) 1000px, 1200px"
+        alt="{{ handyman.name }}"
+        class="handyman-image"
+      />
+      <div class="handyman-info">
+        <h3>{{ handyman.name }}</h3>
+        <p>Skill: {{ handyman.skill }}</p>
+        <p>State: {{ handyman.state }}</p>
+        <p>LGA: {{ handyman.lga }}</p>
+        <p>Area: {{ handyman.area }}</p>
+        <p>Daily Pay: #{{ handyman.dailyPay }} Per Day</p>
+        <p>Contact: {{ handyman.phoneNumber }}</p>
+        <a href="/handymen/{{ handyman._id }}" class="cta-button"
+          >Get a Handyman Now</a
+        >
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
