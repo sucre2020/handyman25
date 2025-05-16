@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Handyman Services{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/desktop.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/tablet.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="navigation-bar">
+        <a href="{{url_for('index.index')}}">
+          <img
+            src="{{ url_for('static', filename='images/sangisangsLogo.jpg') }}"
+            alt="sangisang Services Logo"
+            width="50"
+          />
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="{{url_for('index.index')}}">Home</a></li>
+            <li><a href="{{url_for('handymen.handymen')}}">Handymen</a></li>
+            <li><a href="{{url_for('profile.profile')}}">Profile</a></li>
+            <li>
+              <a href="{{url_for('handyman_sign_up.handyman_sign_up')}}"
+                >Handyman Signup</a
+              >
+            </li>
+            <li><a href="{{url_for('about.about')}}">About Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="login-signUp_hamburger-btn">
+          <div class="nav-buttons">
+            <button type="button" class="nav-btn">Login</button>
+            <button type="button" class="nav-btn">Sign Up</button>
+          </div>
+          <div class="hamburger-btn" id="hamburger-btn">
+            <span class="hamburger-lines"></span>
+            <span class="hamburger-lines"></span>
+            <span class="hamburger-lines"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>{% block content %} {% endblock %}</main>
+    <footer class="footer">
+      <div class="footer-top">
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>
+            <strong>Phone:</strong> <a href="tel:+2673182247">+267 318 2247</a>
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:mkandahilda@sisterh.com">handymen@sangisang.com</a>
+          </p>
+          <p>
+            <strong>Address:</strong><br />
+            Plot 29136, Unit 36, Ujuelegba Complex,<br />
+            Lagos, Nigeria
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/handymen">Handymen</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/handymen-signup">Handyman Signup</a></li>
+            <li><a href="/about-us">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Socials -->
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook" title="Facebook">
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22 12.07C22 6.48 17.52 2 12 2S2 6.48 2 12.07c0 4.84 3.44 8.85 7.94 9.81v-6.93h-2.4v-2.88h2.4V9.84c0-2.38 1.42-3.7 3.6-3.7 1.04 0 2.13.19 2.13.19v2.34h-1.2c-1.18 0-1.55.73-1.55 1.48v1.77h2.64l-.42 2.88h-2.22v6.93C18.56 20.92 22 16.91 22 12.07Z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="WhatsApp" title="WhatsApp">
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.003 2.993c-7.285 0-13.18 5.873-13.18 13.118 0 2.313.603 4.573 1.751 6.568L2 30l7.485-2.494a13.104 13.104 0 006.518 1.716c7.285 0 13.18-5.873 13.18-13.118 0-7.243-5.894-13.111-13.18-13.111zm0 23.988a11.352 11.352 0 01-5.775-1.544l-.41-.241-4.453 1.485 1.472-4.33-.267-.444a11.013 11.013 0 01-1.664-5.79c0-6.19 5.043-11.225 11.318-11.225 6.25 0 11.318 5.031 11.318 11.225 0 6.195-5.063 11.224-11.318 11.224zm6.2-8.331c-.338-.168-2.006-.99-2.318-1.106-.311-.112-.537-.168-.764.169-.225.338-.877 1.106-1.076 1.33-.2.225-.394.251-.732.084-.338-.169-1.426-.527-2.717-1.679-1.003-.891-1.679-1.994-1.876-2.332-.2-.338-.021-.52.148-.689.153-.152.338-.394.5-.59.168-.2.225-.338.338-.563.112-.225.056-.42-.028-.589-.084-.169-.763-1.844-1.045-2.531-.275-.663-.556-.572-.764-.582l-.653-.011c-.225 0-.589.084-.9.42s-1.18 1.15-1.18 2.807c0 1.657 1.208 3.257 1.377 3.481.169.225 2.38 3.627 5.772 5.089.808.348 1.438.556 1.93.712.81.258 1.546.222 2.128.135.649-.096 2.006-.818 2.29-1.609.282-.79.282-1.47.197-1.609-.084-.14-.31-.225-.648-.393z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8.5 19H5.75V9.5H8.5V19zM7.125 8.25c-.875 0-1.5-.625-1.5-1.5s.625-1.5 1.5-1.5 1.5.625 1.5 1.5-.625 1.5-1.5 1.5zM19 19h-2.75v-5.25c0-1.5-.5-2.25-1.5-2.25s-1.5.75-1.5 2.25V19H10.5V9.5h2.5v1.125c.5-.875 1.375-1.375 2.5-1.375 1.75 0 3 1.25 3 3.75V19z"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="TikTok" title="TikTok">
+              <svg
+                width="24"
+                height="24"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.117 2h3.35a5.94 5.94 0 004.49 4.49v3.35a9.264 9.264 0 01-5.11-1.545v7.453a6.83 6.83 0 11-6.83-6.83 6.92 6.92 0 012.245.371v3.264a3.568 3.568 0 00-2.245-.79 3.5 3.5 0 103.5 3.5v-12.263z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2023 –<span id="year"></span>
+          <strong>Handymen Connect™</strong>. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
+  </body>
+</html>
